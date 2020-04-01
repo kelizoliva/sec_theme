@@ -1,0 +1,124 @@
+/*------------------------------ Global ------------------------------*/
+
+body {
+	font-family: "Nunito Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/*------------------------------ Buttons ------------------------------*/
+.button, input.form-submit, 
+input.button-primary, 
+button.button-primary, 
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+	background: #474748;
+	border-radius: 10px;
+}
+.l-navigation .button {
+	margin-bottom: 0;
+	line-height: 1.5em;
+}
+
+/*------------------------------ Navigation ------------------------------*/
+
+.l-navigation .menu li a {
+	cursor: pointer;
+	font-weight: 600;
+}
+.l-navigation .menu li li {
+	text-transform: none;
+	margin: 10px 0;
+}
+.block-system-main-menu .menu-dropdown {
+	float: left;
+}
+.block-menu-menu-user-login .menu-dropdown {
+	float: right;
+}
+.menu-toggle-button-text {
+	color: transparent;
+	display: block;
+	height: 20px;
+}
+.menu-dropdown a span.sub-arrow {
+	font: normal 1.5rem/1.25rem 'Nunito Sans';
+}
+.menu-dropdown ul {
+	background: #282a29;
+}
+.js .menu-dropdown > li:hover > a,
+.js .menu-dropdown > li.has-children > a:hover, 
+.js .menu-dropdown > li.has-children > a:focus,
+.menu-dropdown ul a:hover, .menu-dropdown ul a:focus, 
+.menu-dropdown ul a:active, .menu-dropdown ul a.highlighted {
+	background-color: #48A6BC;
+	color: #282A29;
+}
+.js .block-menu-menu-user-login .menu-dropdown > li:hover,
+.js .block-menu-menu-user-login .menu-dropdown > li.has-children > a:hover, 
+.js .block-menu-menu-user-login .menu-dropdown > li.has-children > a:focus,
+.block-menu-menu-user-login .menu-dropdown ul a:hover, .menu-dropdown ul a:focus, 
+.block-menu-menu-user-login .menu-dropdown ul a:active, .menu-dropdown ul a.highlighted {
+	background-color: transparent;
+}
+@media (min-width: 70em) {
+	.menu-dropdown li:hover a span.sub-arrow {
+		border-color: #282A29 transparent transparent transparent;
+	}
+	.js .menu-dropdown > li:hover {
+		background-color: #48A6BC;
+		color: #282A29;
+	}
+}
+
+/*------------------------------ Sidebar ------------------------------*/
+.layout--ptc-full-screen-left .l-header {
+	background: #ffffff;
+	color: #282a28;
+}
+.layout--ptc-full-screen-left .l-header h2, 
+.layout--ptc-full-screen-left .l-header h3 {
+	color: #282a28;
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 700;
+	font-size: 22px;
+}
+.layout--ptc-full-screen-left .l-header a {
+	color: #282a28;
+}
+
+/*------------------------------ Webforms ------------------------------*/
+#views-exposed-form-portal-offerings-search-home-search .views-exposed-widget,
+#views-exposed-form-portal-offerings-search-home-search .views-exposed-widget .SumoSelect {
+	width: 100%;
+}
+#views-exposed-form-portal-offerings-search-home-search .form-submit {
+	width: 100%;
+}
+form {
+	margin: 0;
+}
+.SumoSelect .CaptionCont.SelectBox {
+	border-radius: 10px;
+}
+#views-exposed-form-portal-offerings-search-home-search fieldset {
+	margin: 0;
+}
+#views-exposed-form-portal-offerings-search-home-search fieldset .fieldset-legend {
+	padding: 0;
+	text-align: right;
+}
+.js fieldset.collapsible .fieldset-legend a {
+	color: #48a6bc;
+	text-transform: none;
+}
+.js fieldset.collapsible .fieldset-legend a:before {
+	position: relative;
+	left: -0.4em;
+	color: #48a6bc;
+	border-top-color: #48a6bc;
+}
+
+
