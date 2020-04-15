@@ -4,6 +4,110 @@ body {
 	font-family: "Nunito Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: #282A29;
+}
+.layout--ptc-full-screen-left .l-statement, 
+.layout--ptc-full-screen-left main.container {
+	height: auto!important;
+	margin-bottom: 3em;
+}
+
+/* ---- Headings ---- */
+
+h1, h2, h6 {
+	font-family: 'playfair_displayregular', serif;
+}
+
+h1 {
+	letter-spacing: 1px;
+}
+h1.page-title {
+	margin: .5em 0;
+	font-weight: 700;
+	text-align: center;
+}
+h1.block-title {
+	margin-top: 1em;
+}
+h2 {
+	font-weight: 900;
+	letter-spacing: 2px;
+}
+/* h3 top padding was an issue for services home section, so if that is needed anywhere else for h3, need to know that */
+h3 {
+	font-family: 'playfair_displayregular', serif;	
+}
+h4 {
+	font-family: 'Nunito Sans', sans-serif;
+}
+h5, h6 {
+	font-family: 'Nunito Sans', sans-serif;
+}
+p {
+	line-height: 24px;
+}
+a {
+	text-decoration: none;
+}
+.l-content a:hover {
+	text-decoration: underline;
+}
+@media (min-width: 48em) {
+	h1.page-title {
+		text-align: left;
+	}
+
+}
+
+/* ---- Object Color Options ---- */
+
+.color-yellow {
+	background: #F5AB3D;
+	color: #282A29;
+	padding: 20px 40px;
+}
+.color-blue {
+	background: #48A6BC;
+	color: #282A29;
+}
+.color-gray-lt {
+	background: #f6f7f8;
+	color: #282A29;
+}
+
+/*------------------------------ Pager Styling ------------------------------*/
+
+.pager-first, 
+.pager-previous, 
+.pager-ellipsis, 
+.pager-current, 
+.pager-next, 
+.pager-last, 
+.pager-item {
+	background: #48A6BC;
+	color: #282A29;
+}
+.pager-first a, 
+.pager-previous a, 
+.pager-next a, 
+.pager-last a, 
+.pager-item a {
+	color: #282A29;
+}
+.pager-current {
+	background: #282A29;
+	color: #F4F4F4;
+}
+.pager-current a {
+	color: #F4F4F4;
+}
+.pager-first a:hover, 
+.pager-previous a:hover, 
+.pager-next a:hover, 
+.pager-last a:hover, 
+.pager-item a:hover {
+	background: #282A29;
+	color: #F4F4F4;
 }
 
 /*------------------------------ Buttons ------------------------------*/
@@ -15,14 +119,67 @@ button.button-primary,
 .ui-widget-header .ui-state-default {
 	background: #474748;
 	border-radius: 10px;
+	font-weight: 900;
 }
 .l-navigation .button {
 	margin-bottom: 0;
 	line-height: 1.5em;
 }
 
-/*------------------------------ Navigation ------------------------------*/
+/*------------------------------ Misc. Objects ------------------------------*/
+.inperson {
+	color: #CC8D34;
+	font-weight: 700;
+	margin-right: 10px;
+}
+.inperson::before{
+	content: "";
+	display: inline-block;
+	background: url('../images/inperson.svg') no-repeat left bottom;
+	background-size: 9px auto;
+	height: 14px;
+	width: 14px;
+	margin-bottom: -1px;
+}
+.online {
+	color: #48A6BC;
+	font-weight: 700;
+}
+.online::before {
+	content: "";
+	display: inline-block;
+	background: url('../images/online.svg') no-repeat left bottom;
+	background-size: 15px auto;
+	height: 14px;
+	width: 20px;
+}
 
+/*-------------------------- Shrinker and Drawer styling --------------------------*/
+.pull {
+	background: url("../images/plus-box.svg") #f6f7f8 no-repeat center right 1em;
+	background-size: 20px 20px;
+	border-bottom: none;
+	border-top: #E2E2E2 1px solid;
+}
+.pull.open {
+	background: url("../images/minus-box.svg") #f6f7f8 no-repeat center right 1em;
+	background-size: 20px 20px;
+}
+.junk {
+	background: #f6f7f8;
+	padding: 0 15px;
+}
+.junk ul {
+	margin: 0;
+	padding: 1em;
+}
+
+/*------------------------------ Navigation ------------------------------*/
+.l-header ul:not(.contextual-links) li {
+	text-transform: none;
+	letter-spacing: 1px;
+	color: #282A29;
+}
 .l-navigation .menu li a {
 	cursor: pointer;
 	font-weight: 600;
@@ -63,6 +220,51 @@ button.button-primary,
 .block-menu-menu-user-login .menu-dropdown ul a:active, .menu-dropdown ul a.highlighted {
 	background-color: transparent;
 }
+/* Page submenus */
+.block-system-main-menu.submenu-tabs ul.menu-tree {
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	border: 0;
+	padding: 0px;
+	position: relative;
+	list-style: none;
+	list-style-image: none;
+	background-color: transparent;
+	border-bottom: 1px solid #EAEAEA;
+	width: 100%;
+	height: auto;
+	clear: both;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+}
+.block-system-main-menu.submenu-tabs ul.menu-tree li {
+	float: none;
+	background: transparent;
+	border-right: none;
+	padding: 0;
+}
+.block-system-main-menu.submenu-tabs ul.menu-tree li.active-trail {
+	background-color: #fff;
+	padding: 0 0 1px 0;
+}
+.block-system-main-menu.submenu-tabs ul.menu-tree li a {
+	display: block;
+	text-decoration: none;
+	padding: 0.5em 0.6em 0.3em 0.6em;
+	position: relative;
+	top: 0px;
+	color: #6D6D6D;
+	font-weight: 900;
+	transition: all 0.3s ease;
+}
+.block-system-main-menu.submenu-tabs ul.menu-tree li a:hover {
+	color: #282A29;
+}
+.block-system-main-menu.submenu-tabs ul.menu-tree li.active-trail a {
+	color: #282A29;
+}
+
 @media (min-width: 70em) {
 	.menu-dropdown li:hover a span.sub-arrow {
 		border-color: #282A29 transparent transparent transparent;
@@ -77,6 +279,7 @@ button.button-primary,
 .layout--ptc-full-screen-left .l-header {
 	background: #ffffff;
 	color: #282a28;
+	border-right: none;	
 }
 .layout--ptc-full-screen-left .l-header h2, 
 .layout--ptc-full-screen-left .l-header h3 {
@@ -88,21 +291,174 @@ button.button-primary,
 .layout--ptc-full-screen-left .l-header a {
 	color: #282a28;
 }
+.layout--ptc-full-screen-left .header-logo-wrapper {
+	max-width: 30%;
+}
+@media (min-width: 62em) {
+	.layout--ptc-full-screen-left .header-logo-wrapper {
+		max-width: 75%;
+    }
+}
+
+
+/*-------------------------- Hero Section Styling --------------------------*/
+
+.front .l-content,
+.front .l-content > .col-12 {
+	padding: 0!important;
+}
+.ptc-hero {
+	background-image: url('../images/home-hero.jpg');
+	background-position: right top;
+	height: 70vh;
+}
+.ptc-hero div:not(.contextual-links-wrapper) {
+	top: 20%;
+}
+.ptc-hero h1 {
+	font-size: 2.25rem;
+	font-family: "playfair_displaybold", serif;
+}
+.dblue-box {
+	top: unset;
+	background-color: transparent;
+	padding: 0 40px;
+}
+@media (min-width: 70em) {
+	.ptc-hero {
+		height: 70vh;
+	}
+	.ptc-hero h1 {
+		font-size: 3.25rem;
+	}
+	.ptc-hero div:not(.contextual-links-wrapper) {
+		top: unset;
+		align-self: flex-end;
+		padding-bottom: 1em;
+	}
+}
+
+/*-------------------------- Hero Sub-Section Styling --------------------------*/
+
+.color-yellow h4 {
+	font-size: 2rem;
+	font-weight: 700;
+}
+.color-yellow select.form-select {
+	border-color: transparent;
+	background: url('../images/right-arrow.svg') no-repeat #282A29;
+	background-size: 7px auto;
+	background-position: center right 10px;
+	color: #F4F4F4;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px 25px 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.color-yellow select.form-select:hover,
+.color-yellow select.form-select:focus {
+	background: url('../images/right-arrow-blk.svg') no-repeat #F4F4F4;
+	background-size: 7px auto;
+	background-position: center right 10px;
+	color: #282A29;
+}
+@media (min-width: 48em) {
+	.color-yellow select.form-select {
+		margin-left: 40px;
+	}
+}
 
 /*------------------------------ Webforms ------------------------------*/
 #views-exposed-form-portal-offerings-search-home-search .views-exposed-widget,
-#views-exposed-form-portal-offerings-search-home-search .views-exposed-widget .SumoSelect {
+#views-exposed-form-portal-offerings-search-page .views-exposed-widget,
+#views-exposed-form-portal-offerings-search-state-taxonomy-filters .views-exposed-widget,
+#views-exposed-form-portal-offerings-search-home-search .views-exposed-widget .SumoSelect,
+#views-exposed-form-portal-offerings-search-page .views-exposed-widget .SumoSelect,
+#views-exposed-form-portal-offerings-search-state-taxonomy-filters .views-exposed-widget .SumoSelect {
 	width: 100%;
 }
-#views-exposed-form-portal-offerings-search-home-search .form-submit {
+#views-exposed-form-portal-offerings-search-home-search .form-submit,
+#views-exposed-form-portal-offerings-search-page .views-exposed-widget .form-submit,
+#views-exposed-form-portal-offerings-search-state-taxonomy-filters .form-submit {
 	width: 100%;
+	font-weight: 900;
+	cursor: pointer;
 }
 form {
 	margin: 0;
 }
+select.form-select {
+	background-color: #f6f7f8;
+	background-image: url('../../palante/images/down-arrow.svg');
+	background-repeat: no-repeat;
+	border: 0;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	padding: 10px 14px;
+	background-size: 20px;
+	background-position: center right 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+select.form-select:hover {
+	background-color: #E2E2E2;
+}
+/* Sumo Select styling */
 .SumoSelect .CaptionCont.SelectBox {
 	border-radius: 10px;
+	transition: all 0.3s ease;
 }
+.SumoSelect > .CaptionCont > label > i {
+	background-image: url('../../palante/images/down-arrow.svg');
+	width: 20px;
+	background-size: 20px;
+	top: 40%;
+}
+.SumoSelect:focus > .CaptionCont, 
+.SumoSelect:hover > .CaptionCont, 
+.SumoSelect.open > .CaptionCont {
+	box-shadow: none;
+	background: #E2E2E2;
+}
+.SumoSelect > .optWrapper > .options li.opt {
+	padding: 12px 6px;
+}
+.SumoSelect > .optWrapper > .options li label {
+	white-space: pre-wrap;
+	line-height: 1.25;
+	font-weight: 100;
+}
+.SumoSelect > .optWrapper.multiple > .options li.opt.selected span i, 
+.SumoSelect .select-all.selected > span i, 
+.SumoSelect .select-all.partial > span i {
+	background-color: #5BCAEA;
+}
+.SumoSelect > .optWrapper.multiple > .options li.opt span i, 
+.SumoSelect .select-all > span i {
+	box-shadow: none;
+}
+.SumoSelect.open .search-txt {
+	border: 1px solid #E2E2E2;
+	padding: 10px 14px;
+	border-radius: 10px 10px 0 0;
+}
+.SumoSelect > .optWrapper {
+	box-shadow: none;
+	border-radius: 0 0 10px 10px;
+}
+.SumoSelect > .optWrapper.multiple > .options li.opt {
+	margin-bottom: 0;
+}
+.SumoSelect > .optWrapper > .options li.opt:hover {
+	background: #F4F4F4;
+}
+.SumoSelect label {
+	margin-bottom: 0;
+}
+/* End Sumo Select styling */
 #views-exposed-form-portal-offerings-search-home-search fieldset {
 	margin: 0;
 }
@@ -113,12 +469,237 @@ form {
 .js fieldset.collapsible .fieldset-legend a {
 	color: #48a6bc;
 	text-transform: none;
+	font-size: 15px;
 }
 .js fieldset.collapsible .fieldset-legend a:before {
 	position: relative;
-	left: -0.4em;
+	left: 0;
 	color: #48a6bc;
 	border-top-color: #48a6bc;
+	border: none;
+	padding: 0;
+	top: 3px;
+	content: "-";
+	font-size: 34px;
+	line-height: 0;
+	
+}
+.js fieldset.collapsible.collapsed .fieldset-legend a:before {
+	background: url("../images/filter.svg") no-repeat;
+	content: "";
+	top: 1px;
+	font-size: unset;
+	padding: 0 8px;
+	
+}
+#views-exposed-form-portal-offerings-search-home-search fieldset .fieldset-wrapper {
+	padding: 0;
+}
+#views-exposed-form-portal-offerings-search-home-search .fieldset-wrapper .form-item {
+	padding: .5em 0 0 0;
+}
+#views-exposed-form-portal-offerings-search-home-search fieldset {
+	padding: 2.5em 0 0 0;
+}
+.js #views-exposed-form-portal-offerings-search-home-search fieldset.collapsed {
+	padding: 2.5em 0 0!important;	
+}
+
+/*------------------------------ Search Results ------------------------------*/
+.view-name-portal_offerings_search h1.page-title {
+	font-family: 'Nunito Sans', sans-serif;
+}
+.view-portal-offerings-search .views-grid-box,
+.view-trainings .views-grid-box {
+	border: none;
+	border-bottom: 1px #CECECE solid;
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	margin-bottom: 2em;
+}
+.view-portal-offerings-search .views-label,
+.view-trainings .views-label {
+	font-weight: 700;
+	display: inline;
+}
+.view-portal-offerings-search .views-field:not(.indicators) .field-content,
+.view-trainings .views-field:not(.indicators) .field-content {
+	display: inline;
+}
+.view-portal-offerings-search .type {
+	margin-left: -0.9em;
+	margin-top: -1em;
+	text-align: right;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #ffffff;
+}
+.view-portal-offerings-search .type span {
+	padding: 5px 10px;
+	border-radius: 10px 10px 10px 0;
+	position: relative;
+}
+.view-portal-offerings-search .type span::after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+    right: auto;
+    top: auto;
+	bottom: -10px;
+	border: 12px solid;
+}
+.view-portal-offerings-search .type.Training span  {
+	background: #75caea;
+}
+.view-portal-offerings-search .type.Training span::after {
+	border-color: transparent transparent transparent #75caea;
+}
+.view-portal-offerings-search .type.Technical-Assistance span {
+	background: #e36d50;
+}
+.view-portal-offerings-search .type.Technical-Assistance span::after {
+	border-color: transparent transparent transparent #e36d50;
+}
+.view-portal-offerings-search .type.Policy-Support span {
+	background: #edad55;
+}
+.view-portal-offerings-search .type.Policy-Support span::after {
+	border-color: transparent transparent transparent #edad55;
+}
+.view-portal-offerings-search img.align-right,
+.view-trainings img.align-right {
+	margin-top: 2em;
+}
+.views-field-field-type-of-training,
+.views-field-field-cost-of-training,
+.views-field-field-length-of-training,
+.views-field-field-age-group,
+.views-field-field-topic {
+	margin-bottom: 0.5em;
+}
+.field-content {
+	line-height: 24px;
+}
+
+
+/*------------------------ Section General Styling ------------------------*/
+.l-content.section {
+	padding: 0 0 3em 0;
+}
+
+/*------------------------ Content General Styling ------------------------*/
+.field-address  p {
+	margin: 0;
+}
+.field-name-field-organization-state .field-item:after,
+.block-field-node-field-city .field-item::after {
+	content: ", ";
+}
+.node-type-organization .field-name-field-services-provided .field-item,
+.node-type-organization .field-name-field-organization-state .field-label,
+.node-type-organization .field-name-field-organization-state .field-items,
+.node-type-organization .field-name-field-organization-state .field-item {
+	display: inline;
+}
+/* horizontal tabs general */
+div.horizontal-tabs {
+	border: none;
+}
+.horizontal-tabs ul.horizontal-tabs-list {
+	text-align: center;
+	background-color: transparent;
+	border-right: none;
+	border-bottom: 1px solid #EAEAEA;
+	padding-bottom: 1em;
+}
+.horizontal-tabs ul.horizontal-tabs-list li {
+	display: inline-flex;
+	float: none;
+	background: transparent;
+	border-right: none;
+	padding: 0;
+}
+.horizontal-tabs ul.horizontal-tabs-list li a, 
+.horizontal-tabs ul.horizontal-tabs-list li.selected a {
+	color: #C9C9C9;
+	transition: all 0.3s ease;
+}
+.horizontal-tabs ul.horizontal-tabs-list .selected strong {
+	color: #282A29;
+}
+.horizontal-tabs ul.horizontal-tabs-list li a:hover {
+	background: transparent;
+	color: #282A29;
+}
+.horizontal-tabs ul.horizontal-tabs-list li:hover, 
+.horizontal-tabs ul.horizontal-tabs-list li:focus {
+	background: transparent;
+}
+/* organization list */
+.view-member-organizations .views-row {
+	transition: all 0.3s ease;
+	margin-bottom: 2em;
+}
+.view-member-organizations .views-row.odd {
+	border-right: 1px #CECECE solid;
+}
+.view-member-organizations .views-row:hover {
+	background: #f6f7f8;
+}
+.view-member-organizations .container.gutters > .col-md-6 {
+	padding: 2em;
+}
+.view-member-organizations .views-field-field-logo {
+	text-align: center;
+}
+/* organization pages */
+.block-views-trainings-block-3 .views-field-field-contact-person {
+	margin-top: 1em;
+}
+.block-views-trainings-block-3 .views-field-field-email,
+.block-views-trainings-block-3 .views-field-field-website-url {
+	font-weight: 900;
+}
+.group-trainings .group-url.button {
+	background: #F5AB3D;
+	float: right;
+	cursor: pointer;
+}
+.group-trainings .group-url.button:hover, .group-trainings .group-url.button:focus {
+	color: #333333;
+	background: #d5d5d5;
+}
+.group-trainings .fieldset-wrapper .group-url.button span.ext {
+	display: none;
+}
+.group-trainings .group-url.button::hover {
+	background: #d5d5d5;
+}
+.group-trainings .group-url.button a {
+	color: #282A29;
+}
+/* states */
+.state-content .block-views-state-policies-drop-down-block {
+	margin: 0 auto;
+	padding: 1em;
+	background: #F5AB3D;
+	border-radius: 0 0 10px 10px;
+}
+.state-content .view-member-organizations .views-view-grid {
+	margin: 0 auto;
+}
+.state-content .view-member-organizations img {
+	vertical-align: bottom;
+}
+@media (min-width: 48em) {
+	.state-content .state {
+		display: inline-flex;
+	}
+	.state-content .block-views-state-policies-drop-down-block {
+		float: right;
+	}
 }
 
 
