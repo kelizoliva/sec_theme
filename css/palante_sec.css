@@ -121,6 +121,7 @@ button.button-primary,
 	background: #474748;
 	border-radius: 10px;
 	font-weight: 900;
+	text-decoration: none;
 }
 .l-navigation .button {
 	margin-bottom: 0;
@@ -663,6 +664,10 @@ div.horizontal-tabs {
 	text-align: center;
 }
 /* organization pages */
+.block.block-views-trainings-block-3 .views-view-grid {
+	width: 100%;
+	text-align: center;
+}
 .block-views-trainings-block-3 .views-field-field-contact-person {
 	margin-top: 1em;
 }
@@ -670,23 +675,33 @@ div.horizontal-tabs {
 .block-views-trainings-block-3 .views-field-field-website-url {
 	font-weight: 900;
 }
-.group-trainings .group-url.button {
+.block.block-field-node-field-trainings-webpage .field-item .button {
 	background: #F5AB3D;
-	float: right;
 	cursor: pointer;
+	color: #282A29;
+	text-decoration: none;
 }
-.group-trainings .group-url.button:hover, .group-trainings .group-url.button:focus {
+.block.block-field-node-field-trainings-webpage .field-item .button:hover, 
+.block.block-field-node-field-trainings-webpage .field-item .button:focus {
 	color: #333333;
 	background: #d5d5d5;
 }
-.group-trainings .fieldset-wrapper .group-url.button span.ext {
+.block.block-field-node-field-trainings-webpage .field-item .button span.ext {
 	display: none;
 }
-.group-trainings .group-url.button::hover {
-	background: #d5d5d5;
+.block.block-field-node-field-trainings-webpage {
+	text-align: center;
 }
-.group-trainings .group-url.button a {
-	color: #282A29;
+@media (min-width: 48em) {
+	.block.block-field-node-field-trainings-webpage {
+		float: right;
+		position: relative;
+	}
+}
+@media (min-width: 70em) {
+	.block.block-views-trainings-block-3 .views-view-grid {
+		text-align: left;
+	}
 }
 /* states */
 .state-content .block-views-state-policies-drop-down-block {
@@ -702,7 +717,8 @@ div.horizontal-tabs {
 	vertical-align: bottom;
 }
 @media (min-width: 48em) {
-	.state-content .state {
+	.state-content .state,
+	.node-type-organization .block-system-title {
 		display: inline-flex;
 	}
 	.state-content .block-views-state-policies-drop-down-block {

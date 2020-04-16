@@ -16,6 +16,12 @@
 			$(this).children( '.plsse-hide' ).hide();
 		}
   	});
+  	$('.node-type-organization .block.block-field-node-field-trainings-webpage .field-item  a').each(function () {
+	  	$(this).addClass('button');
+  	});
+  	$('.node-type-organization .block.block-field-node-field-trainings-webpage .field-item  a:contains("Trainings Webpage")').html(function(_, html) {
+		return html.replace(/(Trainings Webpage)/g, 'Visit Trainings Webpage');
+	});
  });
  
  
