@@ -691,11 +691,12 @@ div.horizontal-tabs {
 }
 .block.block-field-node-field-trainings-webpage {
 	text-align: center;
+	position: relative;
+	margin-top: 1em;
 }
 @media (min-width: 48em) {
 	.block.block-field-node-field-trainings-webpage {
 		float: right;
-		position: relative;
 	}
 }
 @media (min-width: 70em) {
