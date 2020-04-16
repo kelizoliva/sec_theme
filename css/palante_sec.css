@@ -25,6 +25,7 @@ h1.page-title {
 	margin: .5em 0;
 	font-weight: 700;
 	text-align: center;
+	font-family: 'Nunito Sans', sans-serif;
 }
 h1.block-title {
 	margin-top: 1em;
@@ -515,7 +516,13 @@ select.form-select:hover {
 	border-bottom: 1px #CECECE solid;
 	margin-bottom: 2em;
 	padding-bottom: 2em;
-	margin-bottom: 2em;
+}
+.view-display-id-block_3.view-trainings .views-grid-box {
+	border: none;
+	border-bottom: 1px #CECECE solid;
+	border-top: 1px #CECECE solid;
+	margin: 2em 0;
+	padding: 2em 1em;
 }
 .view-portal-offerings-search .views-label,
 .view-trainings .views-label {
@@ -593,8 +600,9 @@ select.form-select:hover {
 .field-address  p {
 	margin: 0;
 }
-.field-name-field-organization-state .field-item:after,
-.block-field-node-field-city .field-item::after {
+.field-name-field-organization-state .field-item:not(:last-child):after,
+.block-field-node-field-city .field-item:not(:last-child):after,
+.node-type-organization .field-name-field-services-provided .field-item:not(:last-child):after {
 	content: ", ";
 }
 .node-type-organization .field-name-field-services-provided .field-item,
