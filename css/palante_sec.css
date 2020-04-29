@@ -339,7 +339,9 @@ button.button-primary,
 		padding-bottom: 1em;
 	}
 }
-
+.intro-box {
+	border-left: 1px #CECECE solid;
+}
 /*-------------------------- Hero Sub-Section Styling --------------------------*/
 
 .color-yellow h4 {
