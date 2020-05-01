@@ -26,6 +26,7 @@ h1.page-title {
 	font-weight: 700;
 	text-align: center;
 	font-family: 'Nunito Sans', sans-serif;
+	font-size: 3.5em;
 }
 h1.block-title {
 	margin-top: 1em;
@@ -36,7 +37,8 @@ h2 {
 }
 /* h3 top padding was an issue for services home section, so if that is needed anywhere else for h3, need to know that */
 h3 {
-	font-family: 'playfair_displayregular', serif;	
+	font-family: 'playfair_displayregular', serif;
+	color: #282A29;
 }
 h4 {
 	font-family: 'Nunito Sans', sans-serif;
@@ -112,7 +114,8 @@ a {
 }
 
 /*------------------------------ Buttons ------------------------------*/
-.button, input.form-submit, 
+.button, 
+input.form-submit:not(#edit-reset), 
 input.button-primary, 
 button.button-primary, 
 .ui-state-default, 
@@ -126,6 +129,13 @@ button.button-primary,
 .l-navigation .button {
 	margin-bottom: 0;
 	line-height: 1.5em;
+}
+.button:hover, 
+.button:focus, 
+input.form-submit:not(#edit-reset):hover, 
+input.form-submit:not(#edit-reset):focus {
+	color: #474748;
+	background: #d5d5d5;
 }
 
 /*------------------------------ Misc. Objects ------------------------------*/
@@ -155,6 +165,60 @@ button.button-primary,
 	height: 14px;
 	width: 20px;
 }
+.flag {
+	background: #e2e2e2;
+	color: #474748;
+	border-radius: 0 3px 3px 0;
+	padding: 2px 10px 2px 20px;
+	position: relative;
+	text-decoration: none;
+	font-weight: 900;
+	font-size: .8em;
+}
+.flag::before {
+	background: #fff;
+	border-bottom: 11px solid transparent;
+    border-right: 10px solid  #e2e2e2;
+    border-top: 11px solid transparent;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.National-flag {
+	background: #adddec;
+}
+.National-flag.flag::before {
+	border-right: 10px solid  #adddec;
+}
+.Regional-flag {
+	background: #f1d0a2;
+}
+.Regional-flag.flag::before {
+	border-right: 10px solid  #f1d0a2;
+}
+.State-flag {
+	background: #efb1a4;
+}
+.State-flag.flag::before {
+	border-right: 10px solid  #efb1a4;
+}
+.jump select.form-select {
+	width: 100%;
+	max-width: 300px;
+	}
+.jump-tab {
+	margin: 0 auto;
+	padding: 1em;
+	background: #F5AB3D;
+	border-radius: 0 0 10px 10px;
+}
+@media (min-width: 48em) {
+	.jump-tab {
+		float: right;
+	}
+}
+
 
 /*-------------------------- Shrinker and Drawer styling --------------------------*/
 .pull {
@@ -339,9 +403,6 @@ button.button-primary,
 		padding-bottom: 1em;
 	}
 }
-.intro-box {
-	border-left: 1px #CECECE solid;
-}
 /*-------------------------- Hero Sub-Section Styling --------------------------*/
 
 .color-yellow h4 {
@@ -362,16 +423,21 @@ button.button-primary,
     transition: all 0.3s ease;
 }
 .color-yellow select.form-select:hover,
-.color-yellow select.form-select:focus {
+.color-yellow  select.form-select:focus {
 	background: url('../images/right-arrow-blk.svg') no-repeat #F4F4F4;
 	background-size: 7px auto;
 	background-position: center right 10px;
 	color: #282A29;
 }
 @media (min-width: 48em) {
-	.color-yellow select.form-select {
+	.front .color-yellow .view-state-policies-drop-down select.form-select {
 		margin-left: 40px;
 	}
+}
+
+.intro-box {
+	border-left: 1px #CECECE solid;
+	padding-top: 2em;
 }
 
 /*------------------------------ Webforms ------------------------------*/
@@ -384,11 +450,34 @@ button.button-primary,
 	width: 100%;
 }
 #views-exposed-form-portal-offerings-search-home-search .form-submit,
-#views-exposed-form-portal-offerings-search-page .views-exposed-widget .form-submit,
+#views-exposed-form-portal-offerings-search-page .views-exposed-widget .form-submit:not(#edit-reset),
 #views-exposed-form-portal-offerings-search-state-taxonomy-filters .form-submit {
 	width: 100%;
 	font-weight: 900;
 	cursor: pointer;
+}
+#views-exposed-form-portal-offerings-search-page .views-exposed-widget .form-submit#edit-reset {
+	background: transparent;
+	color: #282A29;
+	cursor: pointer;
+	font-weight: 900;
+	text-decoration: underline;
+	text-decoration-color: #f6ab3f;
+	transition: all 0.3s ease;
+}
+#views-exposed-form-portal-offerings-search-page .views-exposed-widget .form-submit#edit-reset:hover {
+	text-decoration: none;
+}
+#views-exposed-form-portal-offerings-search-page .views-exposed-widget.views-reset-button {
+	text-align: right;
+}
+.view-portal-offerings-search.view-display-id-page .views-field-field-trainings-webpage,
+.view-portal-offerings-search.view-display-id-page .views-field-nothing-1 {
+	display: inline-block;
+}
+.view-portal-offerings-search.view-display-id-page .views-field-nothing-1 .button {
+	padding: 10px 1em;
+	line-height: 2.875;
 }
 form {
 	margin: 0;
@@ -463,10 +552,13 @@ select.form-select:hover {
 	margin-bottom: 0;
 }
 /* End Sumo Select styling */
-#views-exposed-form-portal-offerings-search-home-search fieldset {
+#views-exposed-form-portal-offerings-search-home-search fieldset,
+#views-exposed-form-portal-offerings-search-page fieldset {
 	margin: 0;
+	padding: 2.5em 0 0 0;
 }
-#views-exposed-form-portal-offerings-search-home-search fieldset .fieldset-legend {
+#views-exposed-form-portal-offerings-search-home-search fieldset .fieldset-legend,
+#views-exposed-form-portal-offerings-search-page fieldset .fieldset-legend {
 	padding: 0;
 	text-align: right;
 }
@@ -496,16 +588,16 @@ select.form-select:hover {
 	padding: 0 8px;
 	
 }
-#views-exposed-form-portal-offerings-search-home-search fieldset .fieldset-wrapper {
+#views-exposed-form-portal-offerings-search-home-search fieldset .fieldset-wrapper,
+#views-exposed-form-portal-offerings-search-page fieldset .fieldset-wrapper {
 	padding: 0;
 }
-#views-exposed-form-portal-offerings-search-home-search .fieldset-wrapper .form-item {
+#views-exposed-form-portal-offerings-search-home-search .fieldset-wrapper .form-item,
+#views-exposed-form-portal-offerings-search-page fieldset .fieldset-wrapper .form-item {
 	padding: .5em 0 0 0;
 }
-#views-exposed-form-portal-offerings-search-home-search fieldset {
-	padding: 2.5em 0 0 0;
-}
-.js #views-exposed-form-portal-offerings-search-home-search fieldset.collapsed {
+.js #views-exposed-form-portal-offerings-search-home-search fieldset.collapsed,
+.js #views-exposed-form-portal-offerings-search-page fieldset.collapsed {
 	padding: 2.5em 0 0!important;	
 }
 
@@ -586,11 +678,15 @@ select.form-select:hover {
 .views-field-field-cost-of-training,
 .views-field-field-length-of-training,
 .views-field-field-age-group,
+.views-field-field-locality,
 .views-field-field-topic {
 	margin-bottom: 0.5em;
 }
 .field-content {
 	line-height: 24px;
+}
+.views-field-field-locality {
+	text-align: left;
 }
 
 
@@ -677,19 +773,26 @@ div.horizontal-tabs {
 .block-views-trainings-block-3 .views-field-field-website-url {
 	font-weight: 900;
 }
-.block.block-field-node-field-trainings-webpage .field-item .button {
+.block.block-field-node-field-trainings-webpage .field-item .button,
+.views-field-field-trainings-webpage .field-content.button {
 	background: #F5AB3D;
 	cursor: pointer;
 	color: #282A29;
 	text-decoration: none;
+	padding: 0;
+	line-height: 2.875;
+	padding: 10px 1em;
+}
+.views-field-field-trainings-webpage .field-content.button a {
+	padding: 10px 1em;
+	color: #282A29;
 }
 .block.block-field-node-field-trainings-webpage .field-item .button:hover, 
-.block.block-field-node-field-trainings-webpage .field-item .button:focus {
+.block.block-field-node-field-trainings-webpage .field-item .button:focus,
+.views-field-field-trainings-webpage .field-content.button:hover,
+.views-field-field-trainings-webpage .field-content.button:focus {
 	color: #333333;
 	background: #d5d5d5;
-}
-.block.block-field-node-field-trainings-webpage .field-item .button span.ext {
-	display: none;
 }
 .block.block-field-node-field-trainings-webpage {
 	text-align: center;
@@ -707,12 +810,6 @@ div.horizontal-tabs {
 	}
 }
 /* states */
-.state-content .block-views-state-policies-drop-down-block {
-	margin: 0 auto;
-	padding: 1em;
-	background: #F5AB3D;
-	border-radius: 0 0 10px 10px;
-}
 .state-content .view-member-organizations .views-view-grid {
 	margin: 0 auto;
 }
@@ -724,9 +821,4 @@ div.horizontal-tabs {
 	.node-type-organization .block-system-title {
 		display: inline-flex;
 	}
-	.state-content .block-views-state-policies-drop-down-block {
-		float: right;
-	}
 }
-
-
