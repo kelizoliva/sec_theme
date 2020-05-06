@@ -50,10 +50,12 @@ p {
 	line-height: 24px;
 }
 a {
-	text-decoration: none;
+	text-decoration: underline;
+	text-decoration-color: #f6ab3f;
+	color: #282A29;
 }
 .l-content a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
 @media (min-width: 48em) {
 	h1.page-title {
@@ -62,16 +64,49 @@ a {
 
 }
 
+/*------ Buttons -----*/
+.button, 
+input.form-submit:not(#edit-reset), 
+input.button-primary, 
+button.button-primary, 
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+	background: #474748;
+	color:  #F4F4F4;
+	border-radius: 10px;
+	font-weight: 900;
+	text-decoration: none;
+}
+.l-navigation .button {
+	margin-bottom: 0;
+	line-height: 1.5em;
+}
+.button:hover, 
+.button:focus, 
+input.form-submit:not(#edit-reset):hover, 
+input.form-submit:not(#edit-reset):focus {
+	color: #474748;
+	background: #d5d5d5;
+}
+
+
 /* ---- Object Color Options ---- */
 
 .color-yellow {
 	background: #F5AB3D;
 	color: #282A29;
-	padding: 20px 40px;
+}
+.color-yellow a {
+	color: #282A29;
 }
 .color-blue {
 	background: #48A6BC;
 	color: #282A29;
+}
+.color-red { 
+	background: #e36d50;
+	color: #F4F4F4;
 }
 .color-gray-lt {
 	background: #f6f7f8;
@@ -111,31 +146,6 @@ a {
 .pager-item a:hover {
 	background: #282A29;
 	color: #F4F4F4;
-}
-
-/*------------------------------ Buttons ------------------------------*/
-.button, 
-input.form-submit:not(#edit-reset), 
-input.button-primary, 
-button.button-primary, 
-.ui-state-default, 
-.ui-widget-content .ui-state-default, 
-.ui-widget-header .ui-state-default {
-	background: #474748;
-	border-radius: 10px;
-	font-weight: 900;
-	text-decoration: none;
-}
-.l-navigation .button {
-	margin-bottom: 0;
-	line-height: 1.5em;
-}
-.button:hover, 
-.button:focus, 
-input.form-submit:not(#edit-reset):hover, 
-input.form-submit:not(#edit-reset):focus {
-	color: #474748;
-	background: #d5d5d5;
 }
 
 /*------------------------------ Misc. Objects ------------------------------*/
@@ -210,7 +220,6 @@ input.form-submit:not(#edit-reset):focus {
 .jump-tab {
 	margin: 0 auto;
 	padding: 1em;
-	background: #F5AB3D;
 	border-radius: 0 0 10px 10px;
 }
 @media (min-width: 48em) {
@@ -297,6 +306,7 @@ input.form-submit:not(#edit-reset):focus {
 	list-style: none;
 	list-style-image: none;
 	background-color: transparent;
+	border-top: 1px solid #EAEAEA;
 	border-bottom: 1px solid #EAEAEA;
 	width: 100%;
 	height: auto;
@@ -330,6 +340,9 @@ input.form-submit:not(#edit-reset):focus {
 .block-system-main-menu.submenu-tabs ul.menu-tree li.active-trail a {
 	color: #282A29;
 }
+.l-header .block-system-main-menu.submenu-tabs .menu-toggle-button {
+	display: none;
+}
 
 @media (min-width: 70em) {
 	.menu-dropdown li:hover a span.sub-arrow {
@@ -358,11 +371,21 @@ input.form-submit:not(#edit-reset):focus {
 	color: #282a28;
 }
 .layout--ptc-full-screen-left .header-logo-wrapper {
-	max-width: 30%;
+	max-width: 100%;
+	margin: 0;
+}
+@media (min-width: 48em) {
+	.header-identity-wrapper {
+		text-align: center;
+		float: none;
+	}
 }
 @media (min-width: 62em) {
 	.layout--ptc-full-screen-left .header-logo-wrapper {
-		max-width: 75%;
+		max-width: 100%;
+    }
+    .header-identity-wrapper {
+	    float: left;
     }
 }
 
@@ -390,6 +413,10 @@ input.form-submit:not(#edit-reset):focus {
 	background-color: transparent;
 	padding: 0 40px;
 }
+.block-views-state-policies-drop-down-block,
+.block-views-member-organizations-block-2 {
+	padding: 20px 40px;
+}
 @media (min-width: 70em) {
 	.ptc-hero {
 		height: 70vh;
@@ -409,7 +436,7 @@ input.form-submit:not(#edit-reset):focus {
 	font-size: 2rem;
 	font-weight: 700;
 }
-.color-yellow select.form-select {
+.form-item-jump select.form-select {
 	border-color: transparent;
 	background: url('../images/right-arrow.svg') no-repeat #282A29;
 	background-size: 7px auto;
@@ -422,22 +449,21 @@ input.form-submit:not(#edit-reset):focus {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.color-yellow select.form-select:hover,
-.color-yellow  select.form-select:focus {
+.form-item-jump select.form-select:hover,
+.form-item-jump  select.form-select:focus {
 	background: url('../images/right-arrow-blk.svg') no-repeat #F4F4F4;
 	background-size: 7px auto;
 	background-position: center right 10px;
 	color: #282A29;
 }
+.intro-box {
+	padding: 2em;
+}
+
 @media (min-width: 48em) {
 	.front .color-yellow .view-state-policies-drop-down select.form-select {
 		margin-left: 40px;
 	}
-}
-
-.intro-box {
-	border-left: 1px #CECECE solid;
-	padding-top: 2em;
 }
 
 /*------------------------------ Webforms ------------------------------*/
@@ -469,15 +495,17 @@ input.form-submit:not(#edit-reset):focus {
 	text-decoration: none;
 }
 #views-exposed-form-portal-offerings-search-page .views-exposed-widget.views-reset-button {
-	text-align: right;
+	text-align: center;
 }
-.view-portal-offerings-search.view-display-id-page .views-field-field-trainings-webpage,
-.view-portal-offerings-search.view-display-id-page .views-field-nothing-1 {
+.view-portal-offerings-search.view-display-id-page .views-field-field-trainings-webpage {
 	display: inline-block;
+}
+.view-portal-offerings-search.view-display-id-page .views-field-nothing-1 {
+	text-align: center;
 }
 .view-portal-offerings-search.view-display-id-page .views-field-nothing-1 .button {
 	padding: 10px 1em;
-	line-height: 2.875;
+	margin: 1em;
 }
 form {
 	margin: 0;
@@ -503,11 +531,13 @@ select.form-select:hover {
 .SumoSelect .CaptionCont.SelectBox {
 	border-radius: 10px;
 	transition: all 0.3s ease;
+	text-transform: uppercase;
+	font-size: 14px;
 }
 .SumoSelect > .CaptionCont > label > i {
-	background-image: url('../../palante/images/down-arrow.svg');
+	background-image: url('../images/down-arrow.svg');
 	width: 20px;
-	background-size: 20px;
+	background-size: 15px;
 	top: 40%;
 }
 .SumoSelect:focus > .CaptionCont, 
@@ -608,7 +638,7 @@ select.form-select:hover {
 .view-portal-offerings-search .views-grid-box,
 .view-trainings .views-grid-box {
 	border: none;
-	border-bottom: 1px #CECECE solid;
+	border-bottom: 1px solid #EAEAEA;
 	margin-bottom: 2em;
 	padding-bottom: 2em;
 }
@@ -624,8 +654,8 @@ select.form-select:hover {
 	font-weight: 700;
 	display: inline;
 }
-.view-portal-offerings-search .views-field:not(.indicators) .field-content,
-.view-trainings .views-field:not(.indicators) .field-content {
+.view-portal-offerings-search .views-field:not(.indicators) .field-content:not(.button),
+.view-trainings .views-field:not(.indicators) .field-content:not(.button) {
 	display: inline;
 }
 .view-portal-offerings-search .type {
@@ -775,17 +805,12 @@ div.horizontal-tabs {
 }
 .block.block-field-node-field-trainings-webpage .field-item .button,
 .views-field-field-trainings-webpage .field-content.button {
-	background: #F5AB3D;
 	cursor: pointer;
-	color: #282A29;
 	text-decoration: none;
 	padding: 0;
-	line-height: 2.875;
+	line-height: 1.25em;
 	padding: 10px 1em;
-}
-.views-field-field-trainings-webpage .field-content.button a {
-	padding: 10px 1em;
-	color: #282A29;
+	display: inline-flex;
 }
 .block.block-field-node-field-trainings-webpage .field-item .button:hover, 
 .block.block-field-node-field-trainings-webpage .field-item .button:focus,
