@@ -149,6 +149,38 @@ input.form-submit:not(#edit-reset):focus {
 }
 
 /*------------------------------ Misc. Objects ------------------------------*/
+
+#loader {
+  background: #ffffff;
+  color: #666666;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  float: left;
+  text-align: center;
+  padding-top: 25%;
+  opacity: .95;
+}
+.spinner {
+    margin: 0 auto;
+    height: 64px;
+    width: 64px;
+    animation: rotate 0.8s infinite linear;
+    border: 5px solid #e36d50;
+    border-right-color: transparent;
+    border-radius: 50%;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
 .inperson {
 	color: #CC8D34;
 	font-weight: 700;
@@ -195,22 +227,22 @@ input.form-submit:not(#edit-reset):focus {
     left: 0;
     top: 0;
 }
-.National-flag {
+.National-Organization-flag {
 	background: #adddec;
 }
-.National-flag.flag::before {
+.National-Organization-flag.flag::before {
 	border-right: 10px solid  #adddec;
 }
-.Regional-flag {
+.Regional-Organization-flag {
 	background: #f1d0a2;
 }
-.Regional-flag.flag::before {
+.Regional-Organization-flag.flag::before {
 	border-right: 10px solid  #f1d0a2;
 }
-.State-flag {
+.State-Organization-flag {
 	background: #efb1a4;
 }
-.State-flag.flag::before {
+.State-Organization-flag.flag::before {
 	border-right: 10px solid  #efb1a4;
 }
 .jump select.form-select {
@@ -500,12 +532,9 @@ input.form-submit:not(#edit-reset):focus {
 .view-portal-offerings-search.view-display-id-page .views-field-field-trainings-webpage {
 	display: inline-block;
 }
-.view-portal-offerings-search.view-display-id-page .views-field-nothing-1 {
-	text-align: center;
-}
 .view-portal-offerings-search.view-display-id-page .views-field-nothing-1 .button {
 	padding: 10px 1em;
-	margin: 1em;
+	margin: 1em 0;
 }
 form {
 	margin: 0;
@@ -659,9 +688,8 @@ select.form-select:hover {
 	display: inline;
 }
 .view-portal-offerings-search .type {
-	margin-left: -0.9em;
-	margin-top: -1em;
-	text-align: right;
+	margin: 0 0 2em;
+	text-align: left;
 	text-transform: uppercase;
 	font-weight: 900;
 	color: #ffffff;
@@ -715,8 +743,15 @@ select.form-select:hover {
 .field-content {
 	line-height: 24px;
 }
-.views-field-field-locality {
-	text-align: left;
+.views-field-field-type-of-training {
+	display: inline-block;
+}
+.view-portal-offerings-search .views-field-field-locality {
+	display: inline-block;
+	margin-left: 2em;
+}
+.view-id-trainings .views-field-field-locality {
+	margin: .5em 0;
 }
 
 
@@ -840,6 +875,9 @@ div.horizontal-tabs {
 }
 .state-content .view-member-organizations img {
 	vertical-align: bottom;
+}
+.state-content .view-mode-single-pdf-display h2 a {
+	display: none;
 }
 @media (min-width: 48em) {
 	.state-content .state,
