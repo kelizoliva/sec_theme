@@ -57,6 +57,34 @@ a {
 .l-content a:hover {
 	text-decoration: none;
 }
+ol {
+	counter-reset: list-counter;
+    list-style: none;
+    float:left;
+}
+ol li {
+	margin: 1.5em 0 1.5em 3em;
+    line-height: 24px; 
+    position: relative;
+	}
+ol li:before {
+	content: counter(list-counter);
+    counter-increment: list-counter;
+    width: .5em;
+    height: .5em;
+    padding: .5em;
+    margin-right: 1em;
+    /*border: .25em solid #F5AB3D;*/
+    background: #F5AB3D;
+    color: #282A29;
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    line-height: 14px;
+    position: absolute;
+    left: -3em;
+}
 @media (min-width: 48em) {
 	h1.page-title {
 		text-align: left;
@@ -131,6 +159,8 @@ input.form-submit:not(#edit-reset):focus {
 .pager-last a, 
 .pager-item a {
 	color: #282A29;
+	display: block;
+	position: relative;
 }
 .pager-current {
 	background: #282A29;
@@ -262,6 +292,22 @@ input.form-submit:not(#edit-reset):focus {
 
 
 /*-------------------------- Shrinker and Drawer styling --------------------------*/
+.shrinker {
+	background: url("../images/down-arrow.svg") no-repeat center right 1em;
+	background-size: 20px auto;
+}
+.shrinker.enlarged {
+	background: url("../images/up-arrow.svg") no-repeat center right 1em;
+	background-size: 20px auto;
+}
+.shrinker span {
+	margin-left: 1em;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.shrinker.enlarged span {
+	display: none;
+}
 .pull {
 	background: url("../images/plus-box.svg") #f6f7f8 no-repeat center right 1em;
 	background-size: 20px 20px;

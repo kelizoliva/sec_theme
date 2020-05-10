@@ -3,6 +3,7 @@ $(window).on('load', function (e) {
 	$('#loader').delay(300).fadeOut();
 });
  $(document).ready(function () {
+	$('.shrinker').append('<span>Search<span>');
     $('#edit-field-organization-state-tid').SumoSelect({search: true, searchText: 'Search here.', placeholder: 'Select state(s)...', csvDispCount: 3 });
     $('#edit-field-topic-tid').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select topic(s)...', csvDispCount: 3 });
     $('#edit-type').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select type(s)...', csvDispCount: 3 });
