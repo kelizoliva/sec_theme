@@ -706,6 +706,89 @@ select.form-select:hover {
 	padding: 2.5em 0 0!important;	
 }
 
+/* Web intake forms */
+.block-system-main form {
+	background: #f6f7f8;
+	padding: 2em;
+	max-width: 600px;
+}
+.block-system-main input.form-autocomplete, 
+.block-system-main input.form-text,
+.block-system-main input.form-tel, .webform-client-form input.form-date, 
+.block-system-main input.form-time, 
+.block-system-main input.form-email, 
+.block-system-main input.form-url, 
+.block-system-main input.form-color, 
+.block-system-main input.form-number, 
+.block-system-main input.form-search, 
+.block-system-main input.form-file, 
+.block-system-main textarea.form-textarea {
+	border: 1px solid #282A29;
+}
+.block-system-main .form-item [type="checkbox"] {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    background-color: #E2E2E2;
+    position: relative;
+}
+.block-system-main .form-item [type="checkbox"]:checked {
+  background-color: #48A6BC;
+}
+.block-system-main .form-item [type="checkbox"]:checked:after {
+  display: block;
+  position: absolute;
+  content: '';
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #f6f7f8;
+  color: white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.block-system-main .form-item label.option {
+	cursor: pointer;
+}
+.block-system-main .form-item select.form-select {
+	background-color: #fff;
+	background-image: url('../images/down-arrow.svg');
+	background-repeat: no-repeat;
+	border: 1px solid #282A29;
+	border-radius: 0;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	padding: 10px 14px;
+	background-size: 15px;
+	background-position: center right 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+/* Admin navigation tabs */
+nav.tabs:before {
+	background: transparent;
+}
+ul.primary li.active a, ul.primary li.active a.active, ul.primary li.active a:active, ul.primary li.active a:visited, .responsive-tabs-mobile .expand-dropdown-tabs-label {
+	background-color: #282A29;
+	color: #f6f7f8;
+}
+ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.active a, .expand-dropdown-tabs-control, .responsive-tabs-mobile .expand-dropdown-tabs-control:before, .responsive-tabs-mobile .expand-dropdown-tabs-label {
+	background-color: #f6f7f8;
+	border-color: #F5AB3D;
+}
+ul.primary {
+	margin: 0;
+}
+
+
 /*------------------------------ Search Results ------------------------------*/
 .view-name-portal_offerings_search h1.page-title {
 	font-family: 'Nunito Sans', sans-serif;
