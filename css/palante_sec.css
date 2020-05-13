@@ -790,6 +790,10 @@ ul.primary {
 
 
 /*------------------------------ Search Results ------------------------------*/
+.views-view-grid {
+	display: block;
+}
+
 .view-name-portal_offerings_search h1.page-title {
 	font-family: 'Nunito Sans', sans-serif;
 }
@@ -1013,4 +1017,9 @@ div.horizontal-tabs {
 	.node-type-organization .block-system-title {
 		display: inline-flex;
 	}
+}
+
+/*------------------------ bug corrections (may move to parent theme) ------------------------*/
+.l-navigation {
+	min-height: 28px;
 }
