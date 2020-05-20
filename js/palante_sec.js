@@ -28,7 +28,7 @@ $(window).on('load', function (e) {
 		return html.replace(/(Trainings Webpage)/g, 'Visit Trainings Webpage');
 	});
 	// Hide list of States if this is a national organization
-	$('.National .field-content').each(function() {
+	$('.National-Organization .field-content').each(function() {
 	   $(this).html('All States and Territories');
 	});
  });
