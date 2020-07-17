@@ -1,7 +1,7 @@
 name = Palante SEC
 description = This is a sub-theme the Palante theme
 backdrop = 1.x
-base theme = palante
+base theme = palante_base
 
 stylesheets[all][] = css/palante_sec.css
 

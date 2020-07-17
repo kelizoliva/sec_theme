@@ -1,4 +1,3 @@
- // SEC-specific CSS (needs to move to its own theme)
 $(window).on('load', function (e) {
 	$('#loader').delay(300).fadeOut();
 });
