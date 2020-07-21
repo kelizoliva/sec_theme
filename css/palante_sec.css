@@ -147,6 +147,14 @@ input.form-submit:not(#edit-reset):focus {
 	color: #282A29;
 }
 
+/* Admin tabs */
+
+ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.active a, .expand-dropdown-tabs-control, .responsive-tabs-mobile .expand-dropdown-tabs-control:before, .responsive-tabs-mobile .expand-dropdown-tabs-label {
+	border-color: #F5AB3D;
+}
+
+
+
 /*------------------------------ Pager Styling ------------------------------*/
 
 .pager-first, 
@@ -794,21 +802,6 @@ select.form-select:hover {
 	background-position: center right 10px;
 	cursor: pointer;
 	transition: all 0.3s ease;
-}
-/* Admin navigation tabs */
-nav.tabs:before {
-	background: transparent;
-}
-ul.primary li.active a, ul.primary li.active a.active, ul.primary li.active a:active, ul.primary li.active a:visited, .responsive-tabs-mobile .expand-dropdown-tabs-label {
-	background-color: #282A29;
-	color: #f6f7f8;
-}
-ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.active a, .expand-dropdown-tabs-control, .responsive-tabs-mobile .expand-dropdown-tabs-control:before, .responsive-tabs-mobile .expand-dropdown-tabs-label {
-	background-color: #f6f7f8;
-	border-color: #F5AB3D;
-}
-ul.primary {
-	margin: 0;
 }
 
 
