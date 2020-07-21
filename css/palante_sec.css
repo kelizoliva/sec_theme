@@ -149,10 +149,15 @@ input.form-submit:not(#edit-reset):focus {
 
 /* Admin tabs */
 
-ul.primary li a, ul.primary li a:visited, ul.primary li a:hover, ul.primary li.active a, .expand-dropdown-tabs-control, .responsive-tabs-mobile .expand-dropdown-tabs-control:before, .responsive-tabs-mobile .expand-dropdown-tabs-label {
+.logged-in ul.primary li a, 
+.logged-in ul.primary li a:visited,
+.logged-in ul.primary li a:hover, 
+.logged-in ul.primary li.active a, 
+.expand-dropdown-tabs-control, 
+.responsive-tabs-mobile .expand-dropdown-tabs-control:before, 
+.responsive-tabs-mobile .expand-dropdown-tabs-label {
 	border-color: #F5AB3D;
 }
-
 
 
 /*------------------------------ Pager Styling ------------------------------*/
