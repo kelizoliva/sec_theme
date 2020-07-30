@@ -584,6 +584,7 @@ input.form-submit:not(#edit-reset):focus {
 #views-exposed-form-portal-offerings-search-page .views-exposed-widget .SumoSelect,
 #views-exposed-form-portal-offerings-search-state-taxonomy-filters .views-exposed-widget .SumoSelect {
 	width: 100%;
+	padding: 0 1em 0 0;
 }
 #views-exposed-form-portal-offerings-search-home-search .form-submit,
 #views-exposed-form-portal-offerings-search-page .views-exposed-widget .form-submit:not(#edit-reset),
@@ -639,6 +640,9 @@ select.form-select:hover {
 	background-color: #E2E2E2;
 }
 /* Sumo Select styling */
+.form-item.form-type-select.form-item-field-organization-state-tid {
+	margin-top: -10px;
+}
 .SumoSelect .CaptionCont.SelectBox {
 	border-radius: 10px;
 	transition: all 0.3s ease;
@@ -674,14 +678,37 @@ select.form-select:hover {
 .SumoSelect .select-all > span i {
 	box-shadow: none;
 }
+.SumoSelect .search-txt {
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility .2s, opacity 0.2s linear;
+}
 .SumoSelect.open .search-txt {
 	border: 1px solid #E2E2E2;
 	padding: 10px 14px;
 	border-radius: 10px 10px 0 0;
+	opacity: 1;
+	visibility: visible;
 }
 .SumoSelect > .optWrapper {
 	box-shadow: none;
 	border-radius: 0 0 10px 10px;
+	position: relative;
+	transition-property: all;
+	transition-duration: .2s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	visibility: hidden;
+	height: 0;
+	display: inherit;
+	top: -7px;
+	opacity: 0;
+	
+}
+.SumoSelect.open > .optWrapper {
+	visibility: visible;
+	top: -7px;
+	height: 100%;
+	opacity: 1;
 }
 .SumoSelect > .optWrapper.multiple > .options li.opt {
 	margin-bottom: 0;
