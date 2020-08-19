@@ -95,6 +95,12 @@ ol li:before {
 
 }
 
+/* Back to Top */
+.top-scroller {
+	right: inherit;
+	left: 2em;
+}
+
 /*------ Buttons -----*/
 .button, 
 input.form-submit:not(#edit-reset), 
