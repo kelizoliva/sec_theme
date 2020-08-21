@@ -1,7 +1,34 @@
 $(window).on('load', function (e) {
 	$('#loader').delay(300).fadeOut();
+	
+	// populate limiting filter
+	var limiter = jQuery('#edit-field-organization-state-tid-1');
+	var state = jQuery('#edit-field-organization-state-tid');
+	state.bind('change', function () {
+    	var selected = $(this).val();
+		limiter.val(selected);
+	});
+	state.trigger('change');
+	limiter.bind('change', function () {
+		var submit = $('#views-exposed-form-portal-offerings-search-block-1');
+		submit.submit(function(e) {
+			e.preventDefault(); // avoid to execute the actual submit of the form.
+			var form = $(this);
+			var url = form.attr('action');
+		    $.ajax({
+	           type: "POST",
+	           url: url,
+	           data: form.serialize(), // serializes the form's elements.
+	           success: function(data)
+	           {
+	               alert(data); // show response from the php script.
+	           }
+		    });
+		});
+	});
+	limiter.trigger('change');
 });
- $(document).ready(function () {
+$(document).ready(function () {
 	$('.shrinker').append('<span>Search<span>');
     $('#edit-field-organization-state-tid').SumoSelect({search: true, searchText: 'Search here.', placeholder: 'Select state(s)...', csvDispCount: 3 });
     $('#edit-field-topic-tid').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select topic(s)...', csvDispCount: 3 });
@@ -30,4 +57,9 @@ $(window).on('load', function (e) {
 	$('.National-Organization .field-content').each(function() {
 	   $(this).html('All States and Territories');
 	});
- });
+	if($('#edit-field-organization-state-tid').val()){
+    	$('.block-views-portal-offerings-search-block-1').removeClass('hide');
+	} else {
+    	$('.block-views-portal-offerings-search-block-1').addClass('hide');
+	}
+});

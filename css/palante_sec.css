@@ -941,6 +941,11 @@ select.form-select:hover {
 	margin: .5em 0;
 }
 
+/* Secondary results view */
+.view-id-portal_offerings_search.view-display-id-block_1 .view-filters {
+	display: none;
+}
+
 
 /*------------------------ Section General Styling ------------------------*/
 .l-content.section {
