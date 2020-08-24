@@ -330,11 +330,11 @@ input.form-submit:not(#edit-reset):focus {
 
 
 /*-------------------------- Shrinker and Drawer styling --------------------------*/
-.shrinker {
+.shrinker, .shrinker_2 {
 	background: url("../images/down-arrow.svg") no-repeat center right 1em;
 	background-size: 20px auto;
 }
-.shrinker.enlarged {
+.shrinker.enlarged, .shrinker_2.enlarged {
 	background: url("../images/up-arrow.svg") no-repeat center right 1em;
 	background-size: 20px auto;
 }
@@ -944,6 +944,11 @@ select.form-select:hover {
 /* Secondary results view */
 .view-id-portal_offerings_search.view-display-id-block_1 .view-filters {
 	display: none;
+}
+.block-views-portal-offerings-search-block-1 .block-title {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: "Nunito Sans", sans-serif;
 }
 
 
