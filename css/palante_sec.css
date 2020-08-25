@@ -32,7 +32,7 @@ h1.block-title {
 	margin-top: 1em;
 }
 h2 {
-	font-weight: 900;
+	font-weight: 700;
 	letter-spacing: 2px;
 }
 h3 {
@@ -112,7 +112,7 @@ button.button-primary,
 	background: #474748;
 	color:  #F4F4F4;
 	border-radius: 10px;
-	font-weight: 900;
+	font-weight: 700;
 	text-decoration: none;
 }
 .l-navigation .button {
@@ -271,7 +271,7 @@ input.form-submit:not(#edit-reset):focus {
 	padding: 2px 10px 2px 10px;
     position: relative;
 	text-decoration: none;
-	font-weight: 900;
+	font-weight: 700;
 	font-size: .8em;
 }
 /*
@@ -447,7 +447,7 @@ input.form-submit:not(#edit-reset):focus {
 	position: relative;
 	top: 0px;
 	color: #6D6D6D;
-	font-weight: 900;
+	font-weight: 700;
 	transition: all 0.3s ease;
 }
 .block-system-main-menu.submenu-tabs ul.menu-tree li a:hover {
@@ -596,14 +596,14 @@ input.form-submit:not(#edit-reset):focus {
 #views-exposed-form-portal-offerings-search-page .views-exposed-widget .form-submit:not(#edit-reset),
 #views-exposed-form-portal-offerings-search-state-taxonomy-filters .form-submit {
 	width: 100%;
-	font-weight: 900;
+	font-weight: 700;
 	cursor: pointer;
 }
 #views-exposed-form-portal-offerings-search-page .views-exposed-widget .form-submit#edit-reset {
 	background: transparent;
 	color: #282A29;
 	cursor: pointer;
-	font-weight: 900;
+	font-weight: 700;
 	text-decoration: underline;
 	text-decoration-color: #f6ab3f;
 	transition: all 0.3s ease;
@@ -618,7 +618,7 @@ input.form-submit:not(#edit-reset):focus {
 	display: inline-block;
 }
 .view-portal-offerings-search.view-display-id-page .view-header {
-	font-weight: 900;
+	font-weight: 700;
 	margin-top: 1em;
 }
 .view-portal-offerings-search.view-display-id-page .views-field-nothing-1 .button,
@@ -879,7 +879,7 @@ select.form-select:hover {
 	margin: 0 0 2em;
 	text-align: left;
 	text-transform: uppercase;
-	font-weight: 900;
+	font-weight: 700;
 	color: #ffffff;
 }
 .view-portal-offerings-search .type span {
@@ -1035,7 +1035,7 @@ div.horizontal-tabs {
 }
 .block-views-trainings-block-3 .views-field-field-email,
 .block-views-trainings-block-3 .views-field-field-website-url {
-	font-weight: 900;
+	font-weight: 700;
 }
 .block.block-field-node-field-trainings-webpage .field-item .button,
 .views-field-field-trainings-webpage .field-content.button {
