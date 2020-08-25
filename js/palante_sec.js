@@ -1,17 +1,8 @@
 Backdrop.behaviors.portal = {
   attach: function(context, settings) {
-
     $(function () {
-      
-      // Shrinker needed some text. Don't really like how this is set up, would like to change it.
-    	$('.shrinker').append('<span>Search<span>');
     	
-    	// Re-wording default field text
-      $('#edit-field-organization-state-tid').SumoSelect({search: true, searchText: 'Search here.', placeholder: 'Select state(s)...', csvDispCount: 3 });
-      $('#edit-field-topic-tid').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select topic(s)...', csvDispCount: 3 });
-      $('#edit-type').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select type(s)...', csvDispCount: 3 });
-      $('#edit-field-age-group-tid').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select age(s)...', csvDispCount: 3 });
-      $('#edit-field-type-of-training-value').SumoSelect({search: true, searchText: 'Search here', placeholder: 'In Person or Online...', csvDispCount: 3 });
+    	// Re-formatting field value text and html
     	$('.views-field-field-type-of-training .field-content:contains("person")', context).html(function(_, html) {
     		return html.replace(/(In person)/g, '<span class="inperson">$1</span>');
     	});
@@ -32,27 +23,39 @@ Backdrop.behaviors.portal = {
     	   $(this).html('All States and Territories');
     	});
     	
-    	// I'm hiding something here but I cannot remember where or why?
-    	if($('#edit-field-organization-state-tid').val()){
-        	$('.block-views-portal-offerings-search-block-1').removeClass('hide');
-    	} else {
-        	$('.block-views-portal-offerings-search-block-1').addClass('hide');
-    	}
-    	
     	// Additional drawer functions that hide the pull field if there is no junk
       $('.drawer', context).each(function () {
     	  $(this).children('.plsse-hide').appendTo($(this).children('.pull'));
         if($(this).find('.junk').length == 0) {
     		  $(this).children( '.plsse-hide' ).hide();
     	  }
-    	});
-    	
+    	});	
     });
   }
 };
 
 $(window).on('load', function (e) {
+  
+  // Shrinker needed some text. Don't really like how this is set up, would like to change it.
+	$('.shrinker').append('<span>Search<span>');
+	
+	// Re-wording default search filter text
+  $('#edit-field-organization-state-tid').SumoSelect({search: true, searchText: 'Search here.', placeholder: 'Select state(s)...', csvDispCount: 3 });
+  $('#edit-field-topic-tid').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select topic(s)...', csvDispCount: 3 });
+  $('#edit-type').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select type(s)...', csvDispCount: 3 });
+  $('#edit-field-age-group-tid').SumoSelect({search: true, searchText: 'Search here', placeholder: 'Select age(s)...', csvDispCount: 3 });
+  $('#edit-field-type-of-training-value').SumoSelect({search: true, searchText: 'Search here', placeholder: 'In Person or Online...', csvDispCount: 3 });
+	
+	// Loader delay
 	$('#loader').delay(300).fadeOut();
+	
+  // Hide the secondary view if state is not selected
+	if($('#edit-field-organization-state-tid').val()){
+    	$('.block-views-portal-offerings-search-block-1').removeClass('hide');
+	} else {
+    	$('.block-views-portal-offerings-search-block-1').addClass('hide');
+	}
+	
 	// Populate limiting filter in secondary result view block
 	var limiter = jQuery('#edit-field-organization-state-tid-1');
 	var state = jQuery('#edit-field-organization-state-tid');

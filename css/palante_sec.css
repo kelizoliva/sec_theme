@@ -621,7 +621,8 @@ input.form-submit:not(#edit-reset):focus {
 	font-weight: 900;
 	margin-top: 1em;
 }
-.view-portal-offerings-search.view-display-id-page .views-field-nothing-1 .button {
+.view-portal-offerings-search.view-display-id-page .views-field-nothing-1 .button,
+.view-portal-offerings-search.view-display-id-block_1 .views-field-nothing .button {
 	padding: 10px 1em;
 	margin: 1em 0;
 }
