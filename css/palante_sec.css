@@ -618,7 +618,6 @@ input.form-submit:not(#edit-reset):focus {
 	display: inline-block;
 }
 .view-portal-offerings-search.view-display-id-page .view-header {
-	font-weight: 700;
 	margin-top: 1em;
 }
 .view-portal-offerings-search.view-display-id-page .views-field-nothing-1 .button,
@@ -941,12 +940,17 @@ select.form-select:hover {
 .view-id-trainings .views-field-field-locality {
 	margin: .5em 0;
 }
+.view-id-portal_offerings_search.view-display-id-page .view-header {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 1em;
+}
 
 /* Secondary results view */
 .view-id-portal_offerings_search.view-display-id-block_1 .view-filters {
 	display: none;
 }
-.block-views-portal-offerings-search-block-1 .block-title {
+.block-views-portal-offerings-search-block-1 .block-title,
+.view-id-portal_offerings_search.view-display-id-page .view-header h2 {
 	text-transform: uppercase;
 	font-size: 20px;
 	font-family: "Nunito Sans", sans-serif;
