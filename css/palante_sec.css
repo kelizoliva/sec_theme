@@ -518,7 +518,7 @@ input.form-submit:not(#edit-reset):focus {
 	height: 70vh;
 }
 .ptc-hero div:not(.contextual-links-wrapper) {
-	top: 20%;
+	top: 0;
 }
 .ptc-hero h1 {
 	font-size: 2.25rem;
@@ -533,6 +533,17 @@ input.form-submit:not(#edit-reset):focus {
 .block-views-member-organizations-block-2 {
 	padding: 20px 40px;
 }
+@media (min-width: 38em) {
+  .ptc-hero div:not(.contextual-links-wrapper) {
+	  top: 10%;
+  }
+}
+@media (min-width: 48em) {
+  .ptc-hero div:not(.contextual-links-wrapper) {
+    top: unset;
+	  align-self: flex-end;
+  }
+}
 @media (min-width: 70em) {
 	.ptc-hero {
 		height: 70vh;
@@ -541,8 +552,6 @@ input.form-submit:not(#edit-reset):focus {
 		font-size: 3.25rem;
 	}
 	.ptc-hero div:not(.contextual-links-wrapper) {
-		top: unset;
-		align-self: flex-end;
 		padding-bottom: 1em;
 	}
 }
