@@ -541,8 +541,8 @@ input.form-submit:not(#edit-reset):focus {
 @media (min-width: 48em) {
   .ptc-hero div:not(.contextual-links-wrapper) {
     top: unset;
-	  align-self: flex-start;
-	  text-align: right;
+	  align-self: flex-end;
+	  opacity: 0.7;
   }
 }
 @media (min-width: 70em) {
