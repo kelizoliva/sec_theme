@@ -519,6 +519,7 @@ input.form-submit:not(#edit-reset):focus {
 }
 .ptc-hero div:not(.contextual-links-wrapper) {
 	top: 0;
+	opacity: 0.75!important;
 }
 .ptc-hero h1 {
 	font-size: 2.25rem;
@@ -542,7 +543,6 @@ input.form-submit:not(#edit-reset):focus {
   .ptc-hero div:not(.contextual-links-wrapper) {
     top: unset;
 	  align-self: flex-end;
-	  opacity: 0.7;
   }
 }
 @media (min-width: 70em) {
