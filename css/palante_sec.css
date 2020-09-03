@@ -203,6 +203,15 @@ input.form-submit:not(#edit-reset):focus {
 	color: #F4F4F4;
 }
 
+.block-views-portal-offerings-search-block-1 .pager-first, 
+.block-views-portal-offerings-search-block-1 .pager-previous, 
+.block-views-portal-offerings-search-block-1 .pager-ellipsis,  
+.block-views-portal-offerings-search-block-1 .pager-next, 
+.block-views-portal-offerings-search-block-1 .pager-last, 
+.block-views-portal-offerings-search-block-1 .pager-item {
+  background: #48A6BC;
+}
+
 /*------------------------------ Misc. Objects ------------------------------*/
 
 #loader {
