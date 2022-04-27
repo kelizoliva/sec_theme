@@ -81,4 +81,11 @@ $(window).on('load', function (e) {
 		});
 	});
 	limiter.trigger('change');
+
+	// Horizontal Tabs anchor link hack
+	$(".horizontal-tabs-panes a").click(function() {
+		$(window).on('hashchange',function(){
+		window.location.reload(true);
+		});
+	});
 });
